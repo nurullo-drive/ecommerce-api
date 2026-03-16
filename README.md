@@ -62,3 +62,11 @@ A production-ready RESTful API for e-commerce platforms built with FastAPI and P
 ```bash
 git clone https://github.com/nurullo-drive/ecommerce-api.git
 cd ecommerce-api
+
+## 📦 New Features Added
+
+- ✅ **Complete Orders System** - Checkout, order history, status tracking
+- ✅ **Admin Dashboard** - View all orders, update order status
+- ✅ **Stock Management** - Automatic stock reduction on checkout
+- ✅ **Cart Auto-Clear** - Cart empties automatically after successful order
+- ✅ **Fixed bcrypt** - Permanent fix for password hashing
