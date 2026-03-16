@@ -1,12 +1,13 @@
 from fastapi import FastAPI
-from app.api import products, auth, cart  # Add cart
+from app.api import products, auth, cart, orders 
 
 app = FastAPI(title="E-Commerce API", version="1.0.0")
 
 # Include routers
 app.include_router(products.router, prefix="/api")
 app.include_router(auth.router, prefix="/api")
-app.include_router(cart.router, prefix="/api")  # NEW
+app.include_router(cart.router, prefix="/api")  
+app.include_router(orders.router, prefix="/api")
 
 @app.get("/")
 def root():
@@ -15,7 +16,8 @@ def root():
         "endpoints": {
             "products": "/api/products",
             "auth": "/api/auth",
-            "cart": "/api/cart"  # NEW
+            "cart": "/api/cart",  
+	    "orders": "/api/orders",		
         }
     }
 
